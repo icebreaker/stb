@@ -2,6 +2,6 @@
 #define STB_IMAGE_H
 
 #define STBI_HEADER_FILE_ONLY
-#include "stb_image.c"
+#include "../src/stb/stb_image.c"
 
 #endif
