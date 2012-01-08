@@ -3,6 +3,9 @@ solution "stb"
   configurations { "release" }
 	objdir "build"
 	targetdir "build"
+
+  configuration { "linux", "gmake" }
+    buildoptions { "-fPIC" }
 	
   project "stb_image"
 	  kind "StaticLib"
