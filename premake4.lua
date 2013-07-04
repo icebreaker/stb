@@ -33,10 +33,14 @@ newaction
     if _OPTIONS["prefix"] then
       local libdir = path.join(_OPTIONS["prefix"], "lib")
       local incdir = path.join(_OPTIONS["prefix"], "include")
-      
+
+      os.mkdir(incdir)
+      os.mkdir(libdir)
+
       os.copyfile("stb_image.h"   , incdir)
       os.copyfile("stb_vorbis.h"  , incdir)
       os.copyfile("stb_truetype.h", incdir)
+
       os.copyfile("build/libstb_image.a"    , libdir)
       os.copyfile("build/libstb_vorbis.a"   , libdir)
       os.copyfile("build/libstb_truetype.a" , libdir)
